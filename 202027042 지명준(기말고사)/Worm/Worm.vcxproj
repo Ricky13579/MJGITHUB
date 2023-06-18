@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{037a568e-986c-482f-a503-2e61ec2e2f45}</ProjectGuid>
-    <RootNamespace>Snake</RootNamespace>
+    <ProjectGuid>{a8914b69-bddb-4edb-b0ee-e5141b662f20}</ProjectGuid>
+    <RootNamespace>Worm</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,8 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="gameloop.hpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="KeyBoard.c" />
+    <ClCompile Include="Screen.c" />
+    <ClCompile Include="Snake.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Screen.h" />
+    <ClInclude Include="Snake.h" />
+    <ClInclude Include="KeyBoard.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
