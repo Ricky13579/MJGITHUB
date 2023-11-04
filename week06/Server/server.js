@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.get('/hi', (req, res) => {
     res.json({ message: '안녕하세요, 클라이언트!' });
