@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Start</title>
+    <style>
+        body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        background-color: rgb(204, 237, 114);
+        }
+    .game-container{
+        background-image: url('D:\\MJGITHUB\\202027042기말고사\\2K48Game\\Game page\\배경\\로봇싸움배경.png');
+        background-repeat: no-repeat;
+        background-size: 360px 100%;
+        width: 360px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h3{
+        background-color: white;
+        border: 1px solid red;
+        align-self: baseline;
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .game-contents{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 100px;
+    }
+    .character-container{
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10%;
+    }
+    #bullet{
+        display: none;
+    }
+    #start-text{
+    text-align: center;
+    font-size: 35px;
+    color: yellow;
+    text-shadow: 
+    -1px -1px 0 #ef0000,  
+    1px -1px 0 #ef0000,  
+    -1px 1px 0 #ef0000,  
+    1px 1px 0 #ef0000;
+    }
+    img{
+        width: 117px;
+        height: 83px;
+    }
+    .game-screen{
+        width: 180px;
+        height: 180px;
+        order: 2;
+        align-self: center;
+        display: flex;
+        margin-right: 100px;
+    }
+    .cell{
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    }
+    #action-text{
+    text-align: center;
+    font-size: 35px;
+    color: #CF810D;
+    text-shadow: 
+    -1px -1px 0 #7B7C53,  
+    1px -1px 0 #7B7C53,  
+    -1px 1px 0 #7B7C53,  
+    1px 1px 0 #7B7C53;
+    width: 230px;
+    height: 39px;
+    align-self: center;
+    order: 3;
+    }
+    #time-text{
+        font-size: 25px;
+        order: 4;
+        text-align: center;
+        align-self: center;
+        position: absolute;
+        bottom: 5px;
+    }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-contents">
+            <div class="character-container">
+                    <img id="user" src="D:\\MJGITHUB\\202027042기말고사\\2K48Game\\Game page\\주인공\\1.스탠딩포즈(위아래)\\01일어났다.png">
+                    <img id="bullet" src="">
+                    <span id="start-text">Game Start</span>
+                    <img id="villian" src="D:\\MJGITHUB\\202027042기말고사\\2K48Game\\Game page\\빌런\\빌런스탠딩(앉았다일어나)\\빌런일어나.png">
+        </div>
+                <div class="game-screen">
+                    <div class="boardLine" id="firstBoardLine">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="boardLine" id="secondBoardLine">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="boardLine" id="thirdBoardLine">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="boardLine" id="fourthBoardLine">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="boardLine" id="fifthBoardLine">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    <div class="boardLine" id="sixthBoardLine">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                </div>
+              <span id="action-text"></span>
+              <strong id="time-text">Time : 0:00</strong>
+        </div>
+    </div>
+    <h3 id="score">Score : 0</h3>
+    <script src="game(6).js"></script>
+</body>
+</html>

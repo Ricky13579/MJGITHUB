@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설명창</title>
+   <style>
+    body{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #a18f8f;
+    }
+    h1{
+        font-size: 35px;
+    margin-bottom: 10px;
+    text-shadow:
+        -1px -1px 0 #EA9C27,  
+        1px -1px 0 #EA9C27,  
+        -1px 1px 0 #EA9C27,  
+        1px 1px 0 #EA9C27;;
+    }
+    #homecircle{
+        background-color: #862626;
+        width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+    #icon img{
+        width: 24px;
+        height: 24px;
+    }
+    .description{
+            background-color: white; /* 하얀색 배경 */
+            width: 600px;
+            height: 250px;
+            padding: 10px; /* 안쪽 여백 조절 */
+            margin-top: 20px; /* 상단 여백 조절 */
+            border : 3px dashed red;
+            font-weight: bold;
+        }
+    .description li
+    {
+        margin-bottom: 5%;
+    }
+    .img{
+        display: flex;
+        flex-direction: row;
+    }
+    img{
+        margin-top: 10%;
+        width: 117px;
+        height: 83px;
+    }
+    p{
+        font-weight: bold;
+    }
+   </style>
+</head>
+<body>
+    <h1>2048 게임하는 법</h1>
+    <div id="homecircle">
+        <div id="icon">
+                <img src="D:\MJGITHUB\202027042기말고사\2K48Game\Tutorial page\홈.png">
+        </div>
+    </div>
+    <div class="description">
+        <p>2048 게임은 숫자 타일을 이동하고 병합하여 2048 타일을 만드는 게임입니다.</p>
+        <ol>
+            <li>게임을 열고 게임 시작하기 버튼을 클릭합니다.</li>
+            <li>화면을 손가락으로 드래그하며 타일을 이동합니다.</li>
+            <li>2048을 완성시키면 당신의 승리입니다.</li>
+            <li>2048 타일을 만들면 당신이 못 만들면 악당이 이깁니다.</li>
+        </ol>
+    </div>
+    <div class="img">
+        <div class="User">
+            <img src="D:\MJGITHUB\202027042기말고사\2K48Game\Tutorial page\01일어났다.png"><p>[주인공]</p>
+        </div>
+        <div class="Villian">
+            <img src="D:\MJGITHUB\202027042기말고사\2K48Game\Tutorial page\빌런일어나.png"><p>[빌런]</p>
+        </div>
+    </div>
+    <script src="tutorial.js"></script>
+</body>
+</html>
